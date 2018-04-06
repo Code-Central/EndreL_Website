@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Animals</title>
+	</head>
+
+	<body>
+
+	<div class= "Img">
+		<img id="myImg" width = "200" height = "150" src = "Images/Panda.jpg"/>
+
+		<br>
+
+		<button class="button2" onclick="nextPicture();">Next!</button>
+
+		<button class="button2" onclick="previousPicture();">Back!</button>
+	</div>
+		
+
+		<p id="Change">Found on History.com, FactRetriever, India TV, Zoo Berlin, Buisness Insider UK, China Travel, Bored Panda, Giphy</p>
+
+
+
+
+
+		<script>
+
+			var index=0;
+
+			var pandas = [
+				"Images/Panda.jpg", // 0
+				"Images/Panda2.jpg", // 1
+				"Images/Panda3.jpg", // 2
+				"Images/Panda4.jpg", // 3
+				"Images/Panda5.jpg", // 4
+				"Images/Panda6.jpg", // 5
+				"Images/Panda7.jpg", // 6
+				"Images/Panda8.jpg", // 7
+				"Images/Panda9.jpg", // 8
+			];
+
+			var panda = [
+				"Yes, this is cute", // 0
+				"stuff", // 1
+				"something", // 2
+				"a panda", // 3
+				"idk", // 4
+				"what", // 5
+				"things", // 6
+				"Yes, I know adorable", // 7
+				"who knows", // 8
+			];
+
+
+
+
+			function nextPicture() {
+				index++;
+
+				if (index > pandas.length - 1) {
+					index = 0;
+				}
+
+			    document.getElementById("myImg").src = pandas[index];
+			    document.getElementById("Change").innerHTML= panda[index];
+			}
+			function previousPicture() {
+				index--;
+
+				if (index < 0) {
+					index = pandas.length - 1;
+				}
+				document.getElementById("myImg").src= pandas[index];
+				document.getElementById("Change").innerHTML= panda[index];
+			}
+				
+
+
+
+
+
+
+				
+
+		</script>
+
+<style>
+
+.Img {
+	text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.button2{
+	  background-color: #4CAF50; /* Green */
+	      border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+#myImg {
+	border-radius: 50%;
+}
+
+</style>
+
+
+
+
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+ 
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Click Me!!</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Pandas</h4>
+        </div>
+        <div class="modal-body">
+          <p>Something about a Panda</p>
+          <img = width = "200" height = "150" src = "Images/Panda10.jpg"/>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Bye-Bye!</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+
+
+	</body>
+
+	<a href="index.html"> Back To Data!!</a>
+</html>
